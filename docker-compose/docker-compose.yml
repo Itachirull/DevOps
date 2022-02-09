@@ -4,7 +4,7 @@ services:
     build:
       context: ./build_artifact/
     volumes:
-      - ./artifact/:/opt/artifact/:rw
+      - /home/ubuntu/DevOps/docker-compose/artifact/:/opt/artifact:rw
   prod:
     image: tomcat:9.0-alpine
     ports:
