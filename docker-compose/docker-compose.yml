@@ -11,5 +11,5 @@ services:
       - "8080:8080"
     volumes:
       - ./artifact:/usr/local/tomcat/webapps:ro
-  depends_on:
-    - test
+    depends_on:
+      - test
