@@ -1,0 +1,17 @@
+---
+version: '3.3'
+services:
+  test:
+    build:
+      context: ../../../pythonProject4/DevOps/docker-compose/build_artifact/
+    volumes:
+      - ./artifact/:/opt/artifact/:rw
+  prod:
+    image: tomcat:9.0-alpine
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./artifact:/usr/local/tomcat/webapps:ro
+  depends_on:
+    - test
+---
