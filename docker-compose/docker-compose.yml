@@ -3,7 +3,7 @@ version: '3.3'
 services:
   test:
     build:
-      context: ../../../pythonProject4/DevOps/docker-compose/build_artifact/
+      context: ./build_artifact/
     volumes:
       - ./artifact/:/opt/artifact/:rw
   prod:
