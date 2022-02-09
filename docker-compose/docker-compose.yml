@@ -1,4 +1,3 @@
----
 version: '3.3'
 services:
   test:
@@ -14,4 +13,3 @@ services:
       - ./artifact:/usr/local/tomcat/webapps:ro
   depends_on:
     - test
----
