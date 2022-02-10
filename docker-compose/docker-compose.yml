@@ -10,7 +10,7 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - app:/usr/lib/tomcat/webapp
+      - app:/usr/local/tomcat/webapps
     depends_on:
       - test
 volumes:
