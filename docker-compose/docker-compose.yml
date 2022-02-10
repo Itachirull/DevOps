@@ -4,7 +4,7 @@ services:
     build:
       context: ./build_artifact/
     volumes:
-        - app:/opt/artifact
+      - app:/opt/artifact
   prod:
     image: tomcat:9.0-alpine
     ports:
