@@ -4,13 +4,13 @@ services:
     build:
       context: ./build_artifact/
     volumes:
-      - app:/opt/artifact
+      - app:/opt
   prod:
     image: tomcat:9.0-alpine
     ports:
       - "8080:8080"
     volumes:
-      - app:/usr/local/tomcat/webapps
+      - app:/usr/local/tomcat/webapps:x
     depends_on:
       - test
 volumes:
