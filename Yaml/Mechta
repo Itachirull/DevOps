@@ -1,0 +1,20 @@
+---
+mechta:
+  1otdel:
+    sotrudiniki:
+      olya:
+        - 4
+      dmitry:
+        - 3
+      Ivan:
+        - 2
+  2otdel:
+    sotrudniki:
+      urist:
+        Roman:
+          - 4
+
+  3otdel:
+  4otdel:
+  5otdel:
+---
