@@ -11,10 +11,10 @@
         - openjdk-11-jdk
         - wget
         - git
-  tasks:
-    - name: build artefact
-      git:
-        repo: https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
-        dest: /opt/
-        clone: yes
-        update: yes
+
+  - name: build artefact
+    git:
+      repo: https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
+      dest: /opt/
+      clone: yes
+      update: yes
