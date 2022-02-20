@@ -15,6 +15,9 @@
   - name: build artefact
     git:
       repo: https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
-        dest: /opt/
-        clone: yes
-        update: yes
+      dest: /opt/
+      clone: yes
+      update: yes
+
+  - name: build artefact
+    command: mvn -f /opt/pom.xml package
