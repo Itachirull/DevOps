@@ -15,12 +15,12 @@
   - name: build artefact
     git:
       repo: https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
-      dest: /opt/boxfuse/
+      dest: /opt/
       clone: yes
       update: yes
 
   - name: build artefact
-    command: mvn -f /opt/boxfuxse/pom.xml package
+    command: mvn -f /opt/pom.xml package
 
 - name: deploy images and init
   hosts: prod
@@ -34,5 +34,5 @@
       - tomcat9
 
   - name: Copy artifact
-    synchronize: src=/opt/boxfuse/target/hello-1.0.war dest=/var/lib/tomcat9/webapps
-    delegate_to: 172.20.0.20
+    synchronize: src=/opt/target/hello-1.0.war dest=/var/lib/tomcat9/webapps
+    delegate_to: 172.20.0.19
