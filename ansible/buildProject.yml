@@ -5,9 +5,10 @@
   tasks:
   - name: install mvn
     apt:
-      name:
+      name: "{{ item }}"
+    become: true
+    loop:
         - maven
         - openjdk-11-jdk
         - wget
         - git
-      state: present
