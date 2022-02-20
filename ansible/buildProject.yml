@@ -27,7 +27,7 @@
   become: yes
 
   tasks:
-    - name: install java and mvn
+    - name: install tomcat9
       apt:
         name: "{{ item }}"
       loop:
