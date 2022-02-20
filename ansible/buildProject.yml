@@ -22,17 +22,17 @@
   - name: build artefact
     command: mvn -f /opt/pom.xml package
 
-- name: deploy images
+- name: deploy images and init
   hosts: prod
   become: yes
 
   tasks:
-    - name: install tomcat9
-      apt:
-        name: "{{ item }}"
-      loop:
-        - tomcat9
+   - name: install tomcat9
+     apt:
+       name: "{{ item }}"
+     loop:
+       - tomcat9
 
-    - name: Copy artifact
-      synchronize: src=/opt/target/hello-1.0.war dest=/var/lib/tomcat9/webapps
-      delegete_to: 172.20.0.20
+   - name: Copy artifact
+     synchronize: src=/opt/target/hello-1.0.war dest=/var/lib/tomcat9/webapps
+     delegete_to: 172.20.0.20
