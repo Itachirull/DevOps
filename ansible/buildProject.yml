@@ -6,7 +6,6 @@
   - name: install mvn
     apt:
       name: "{{ item }}"
-    become: true
     loop:
         - maven
         - openjdk-11-jdk
