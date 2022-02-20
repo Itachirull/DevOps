@@ -11,5 +11,4 @@
     vars:
       packages:
         - maven
-        - openjdk-11-jdk
 ---
