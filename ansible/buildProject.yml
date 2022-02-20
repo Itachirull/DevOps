@@ -3,7 +3,7 @@
   become: yes
 
   tasks:
-  - name: install mvn
+  - name: install env
     apt:
       name: "{{ item }}"
     loop:
@@ -11,3 +11,10 @@
         - openjdk-11-jdk
         - wget
         - git
+  tasks:
+    - name: build artefact
+      git:
+        repo: https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
+        dest: /opt/
+        clone: yes
+        update: yes
