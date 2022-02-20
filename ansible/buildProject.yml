@@ -5,9 +5,9 @@
   tasks:
   - name: install mvn
     apt:
-      name: "{{ packages }}"
-      state: present
-    vars:
-      packages:
+      name:
         - maven
         - openjdk-11-jdk
+        - wget
+        - git
+      state: present
