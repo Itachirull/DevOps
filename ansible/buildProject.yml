@@ -1,9 +1,9 @@
-- name: build artefact
+- name: install env
   hosts: build
   become: yes
 
   tasks:
-  - name: install env
+  - name: install java and mvn
     apt:
       name: "{{ item }}"
     loop:
@@ -12,9 +12,13 @@
         - wget
         - git
 
-  - name: build artefact
-    git:
-      repo: https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
-      dest: /opt/
-      clone: yes
-      update: yes
+- name: build artefact
+  hosts: build
+  become: yes
+  tasks:
+    - name: build artefact
+      git:
+        repo: https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
+        dest: /opt/
+        clone: yes
+        update: yes
