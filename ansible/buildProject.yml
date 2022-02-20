@@ -21,3 +21,14 @@
 
   - name: build artefact
     command: mvn -f /opt/pom.xml package
+
+- name: deploy images
+  hosts: prod
+  become: yes
+
+  tasks:
+    - name: install java and mvn
+      apt:
+        name: "{{ item }}"
+      loop:
+        - tomcat9
