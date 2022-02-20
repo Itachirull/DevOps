@@ -1,5 +1,5 @@
 ---
-name: install maven and openjdk
+- name: install maven and openjdk
   hosts: build
   become: yes
 
