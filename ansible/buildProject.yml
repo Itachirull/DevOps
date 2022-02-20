@@ -1,5 +1,5 @@
 ---
-- name: install maven and openjdk
+- name: build artefact
   hosts: build
   become: yes
 
