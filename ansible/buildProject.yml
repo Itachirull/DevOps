@@ -1,0 +1,15 @@
+---
+name: install maven and openjdk
+  host: build
+  become: yes
+
+  task:
+  - name: install mvn
+    apt:
+      name: "{{ packages}}"
+      state: present
+    vars:
+      packages:
+        - maven
+        - openjdk-11-jdk
+---
