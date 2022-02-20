@@ -1,6 +1,6 @@
 ---
 name: install maven and openjdk
-  host: build
+  hosts: build
   become: yes
 
   task:
