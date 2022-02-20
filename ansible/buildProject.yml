@@ -3,7 +3,7 @@
   hosts: build
   become: yes
 
-  task:
+  tasks:
   - name: install mvn
     apt:
       name: "{{packages}}"
@@ -11,4 +11,5 @@
     vars:
       packages:
         - maven
+        - openjdk-11-jdk
 ---
